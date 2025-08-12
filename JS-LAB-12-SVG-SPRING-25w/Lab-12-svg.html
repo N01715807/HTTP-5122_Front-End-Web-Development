@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SVG Lab Simple</title>
+<style>
+  /* 云朵漂移动画 */
+  @keyframes drift {
+    from { transform: translateX(-60px); }
+    to   { transform: translateX(320px); }
+  }
+  #cloud { animation: drift 10s linear infinite; }
+  #sun { cursor: pointer; }
+</style>
+</head>
+<body>
+
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+
+  <rect id="sky" x="0" y="0" width="300" height="200" fill="skyblue"/>
+  <rect id="ground" x="0" y="200" width="300" height="100" fill="green"/>
+
+  <circle id="sun" cx="250" cy="50" r="20" fill="yellow" />
+
+  <g id="cloud" transform="translate(0,50)">
+    <ellipse cx="30" cy="20" rx="20" ry="10" fill="white"/>
+    <ellipse cx="50" cy="20" rx="20" ry="10" fill="white"/>
+    <ellipse cx="40" cy="10" rx="20" ry="10" fill="white"/>
+  </g>
+
+</svg>
+
+<script src="Lab-12-svg.js" defer></script>
+
+</body>
+</html>
